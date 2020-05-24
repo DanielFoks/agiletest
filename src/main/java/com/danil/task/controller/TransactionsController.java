@@ -23,7 +23,7 @@ public class TransactionsController {
 		this.userAmountService = userAmountService;
 	}
 	
-	@PostMapping("/addTransaction/all")
+	@PostMapping("/addTransaction")
 	public void addTransaction(final TransactionBody transactionBody){
 		userAmountService.writeAmount(transactionBody);
 	}
@@ -33,7 +33,7 @@ public class TransactionsController {
 		return userAmountService.findById(id);
 	}
 	
-	@GetMapping("/transaction")
+	@GetMapping("/transaction/all")
 	public List<TransactionBody> allTransactions(){
 		return userAmountService.getTransactions();
 	}
