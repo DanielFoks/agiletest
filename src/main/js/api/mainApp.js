@@ -15,7 +15,7 @@ const MainApp = () => {
 
     let onMessageReceived = (tx) => {
         console.log('New Message Received!!', tx);
-        //setTransactionsList(transactionsList.concat(tx));
+        setTransactionsList(transactionsList.concat(tx));
     }
 
 

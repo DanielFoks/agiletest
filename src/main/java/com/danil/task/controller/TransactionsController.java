@@ -1,7 +1,6 @@
 package com.danil.task.controller;
 
 
-import java.io.IOException;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -24,12 +23,12 @@ public class TransactionsController {
 		this.userAmountService = userAmountService;
 	}
 	
-	@PostMapping("/addTransaction")
+	@PostMapping("/addTransaction/all")
 	public void addTransaction(final TransactionBody transactionBody){
 		userAmountService.writeAmount(transactionBody);
 	}
 	
-	@GetMapping("/transaction/all")
+	@GetMapping("/transaction")
 	public TransactionBody getById(@PathVariable final Integer id){
 		return userAmountService.findById(id);
 	}

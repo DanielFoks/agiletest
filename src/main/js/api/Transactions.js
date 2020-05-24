@@ -5,11 +5,11 @@ const Transactions = ({transactionsList}) => {
 
 
     let renderMessage = (transaction) => {
-        const {tType, amount} = transaction;
-        const color = tType === "credit" ? "red" : "white";
+        const {txType, amount} = transaction;
+        const color = txType === "credit" ? "red" : "white";
         return (
             <tr>
-                <td>{tType}</td>
+                <td>{txType}</td>
                 <td>{amount}</td>
             </tr>
         );
